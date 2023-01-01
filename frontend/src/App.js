@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import PrivateRoute from "./components/PrivateRoute";
 import NewTicket from "./pages/NewTicket";
 import Tickets from "./pages/Tickets";
+import Ticket from "./pages/Ticket";
 
 
 function App() {
@@ -34,14 +35,14 @@ function App() {
                 </PrivateRoute>
               }
             />
-            {/* <Route
+            <Route
               path="/ticket/:ticketId"
               element={
                 <PrivateRoute>
                   <Ticket />
                 </PrivateRoute>
               }
-            /> */}
+            />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
