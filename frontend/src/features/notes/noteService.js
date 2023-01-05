@@ -1,6 +1,6 @@
-import axios from "axios"
+import axios from "axios";
 
-const API_URL = '/api/tickets/'
+const API_URL = "/api/tickets/";
 
 // Get ticket notes
 const getNotes = async (ticketId, token) => {
@@ -23,16 +23,20 @@ const createNote = async (noteText, ticketId, token) => {
     },
   };
 
-  const response = await axios.post(API_URL + ticketId + "/notes",{
-    text: noteText
-  }, config);
+  const response = await axios.post(
+    API_URL + ticketId + "/notes",
+    {
+      text: noteText,
+    },
+    config
+  );
 
   return response.data;
 };
 
-export const noteService = {
-    getNotes,
-    createNote
-}
+const noteService = {
+  getNotes,
+  createNote,
+};
 
-export default noteService
+export default noteService;
